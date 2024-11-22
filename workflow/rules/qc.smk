@@ -30,7 +30,7 @@ rule multiqc:
     log:
         "results/logs/multiqc.log",
     wrapper:
-        "v5.1.0/bio/multiqc"
+        "v5.2.1/bio/multiqc"
 
 
 rule fastqc:
@@ -44,7 +44,7 @@ rule fastqc:
     log:
         "results/logs/fastqc/{sample}.{lane}.{pair}.log",
     wrapper:
-        "v5.1.0/bio/fastqc"
+        "v5.2.1/bio/fastqc"
 
 
 rule samtools_stats:
@@ -55,4 +55,4 @@ rule samtools_stats:
     log:
         "results/logs/samtools_stats/{sample}.log",
     wrapper:
-        "v5.1.0/bio/samtools/stats"
+        "v5.2.1/bio/samtools/stats"

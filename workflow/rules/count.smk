@@ -28,7 +28,7 @@ rule samtools_idxstats:
     params:
         extra="",  # optional params string
     wrapper:
-        "v5.1.0/bio/samtools/idxstats"
+        "v5.2.1/bio/samtools/idxstats"
 
 rule merge_counts:
     input:

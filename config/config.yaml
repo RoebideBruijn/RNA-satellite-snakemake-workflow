@@ -7,7 +7,7 @@ cutadapt_pe:
   adapters: "-a AGATCGGAAGAGCACACGTCTGAACTCCAGTCA -A AGATCGGAAGAGCGTCGTGTAGGGAAAGAGTGT"
 
 bwa_mem:
-  fasta: "dfam-fasta-download_satellites_primates_2024_11_05.fasta"
+  fasta: "/home/ro.d.bruijn/projects/sarah-satellites/RNA-satellite-snakemake-workflow/resources/references/dfam-fasta-download_satellites_primates_2024_11_05.fasta"
   
 sambamba_sort:
   extra: ''
