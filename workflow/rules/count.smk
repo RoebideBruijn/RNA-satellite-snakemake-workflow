@@ -39,13 +39,13 @@ rule merge_counts:
         "results/logs/merge_counts.txt",
     run:
         # Merge count files.
-        frames = (
-            pd.read_csv(fp, sep="\t", skiprows=1, index_col=list(range(6)))
-            for fp in input
-        )
-        merged = pd.concat(frames, axis=1)
+        #frames = (
+        #    pd.read_csv(fp, sep="\t", skiprows=1, index_col=list(range(6)))
+        #    for fp in input
+        #)
+        #merged = pd.concat(frames, axis=1)
 
         # Extract sample names.
-        merged = merged.rename(columns=lambda c: path.splitext(path.basename(c))[0])
-
+        #merged = merged.rename(columns=lambda c: path.splitext(path.basename(c))[0])
+        merged = pd.DataFrame()
         merged.to_csv(output[0], sep="\t", index=True)

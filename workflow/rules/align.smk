@@ -6,7 +6,7 @@ rule bwa_mem:
     output:
         "results/bam/sorted/{sample}.{lane}.bam",
     log:
-        "logs/bwa_mem/{sample}.{lane}.log",
+        "results/logs/bwa_mem/{sample}.{lane}.log",
     params:
         extra=r"-R '@RG\tID:{sample}.{lane}\tSM:{sample}.{lane}'",
         sorting="samtools",  # Can be 'none', 'samtools' or 'picard'.
